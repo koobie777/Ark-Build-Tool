@@ -1,228 +1,210 @@
-# 🛰️ The ARK Forge v1.1.0
-**Enhanced Device Source Management & ARK Ecosystem Directory Structure**
+# 🛰️ ARKFORGE - The ARK Ecosystem Android Development Module
 
-[![ARK Ecosystem](https://img.shields.io/badge/ARK-Ecosystem-blue?style=for-the-badge&logo=android)](https://github.com/koobie777/Ark-Build-Tool)
-[![Commander](https://img.shields.io/badge/Commander-koobie777-green?style=for-the-badge)](https://github.com/koobie777)
-[![System](https://img.shields.io/badge/System-arksupreme--mk1-purple?style=for-the-badge)](.)
+<div align="center">
+  
+  ```
+  ╭─────────────────────────────────────────────╮
+  │       🛰️ THE ARK ECOSYSTEM SUPREME         │
+  │          ARKFORGE Android Builder           │
+  │           Commander: koobie777              │
+  │              Version: 1.1.4                 │
+  ╰─────────────────────────────────────────────╯
+  ```
 
-> **"May The ARK be with you!"** - The ultimate Android ROM/Recovery build toolkit for The ARK ecosystem
+  **The ARK Ecosystem** - A modular homelab command center  
+  **ARKFORGE** - Android development and ROM building orchestrator
 
-## 🌌 The ARK Ecosystem
+</div>
 
-The ARK is a comprehensive Android development ecosystem designed by Commander koobie777, running on the arksupreme-mk1 system. It provides automated, beginner-friendly yet expert-capable tools for building Android ROMs and recoveries across The ARK fleet of devices.
+## 🌌 Overview
 
-### 🚀 The ARK Fleet Devices
-- **🍃 waffle** - OnePlus 12 (Primary ARK Unit - Active)
-- **🔒 device2** - [CLASSIFIED] (Secondary ARK Unit - Standby)  
-- **🔬 device3** - [REDACTED] (Experimental ARK Unit - Development)
+ARKFORGE is the Android development module of The ARK Ecosystem, designed to streamline and automate the Android ROM building process. Built with a space-themed interface and tmux-powered session management, ARKFORGE makes Android development accessible for both expert builders and newcomers (Cadets).
 
-## 📁 ARK Ecosystem Directory Structure
+### The ARK Ecosystem Components:
+- **ARKFORGE** (This Module) - Android ROM/Recovery building
+- **Orbital Command** - System management and monitoring (Coming Soon)
+- Additional modules in development
 
-The ARK Forge automatically organizes your builds using a standardized directory structure:
+## 🚀 Features
 
-```
-~/android/                          # The ARK Base Directory
-├── yaap-waffle/                    # YAAP ROM for OnePlus 12
-├── lineageos-waffle/               # LineageOS ROM for OnePlus 12
-├── twrp-waffle/                    # TWRP Recovery for OnePlus 12
-├── orangefox-waffle/               # OrangeFox Recovery for OnePlus 12
-├── builds/                         # Compiled outputs
-│   ├── yaap-waffle/
-│   ├── twrp-waffle/
-│   └── ...
-├── logs/                           # Build logs and debugging
-│   ├── yaap-waffle/
-│   └── ...
-├── cache/                          # Build cache and downloads
-└── manifests/                      # ROM manifest configurations
-```
+### Core Capabilities
+- 🔧 **Smart Build System** - Automated device discovery → repo selection → build
+- 📱 **Multi-Device Support** - Manage multiple Android devices in your fleet
+- 🔄 **Persistent Sessions** - tmux-powered build sessions that survive disconnections
+- 🛠️ **Modular Architecture** - Easy to extend with new modules
+- 🎨 **ARK Themed Interface** - Consistent space-themed UI across all modules
 
-**Directory Naming Convention**: `{rom_type}-{device_codename}`
+### Current Modules
+1. **Smart Build** - Intelligent build automation
+2. **Recovery Build** - TWRP/OrangeFox builder (In Development)
+3. **ROM Build** - Full ROM compilation
+4. **Boot/Recovery Images** - Extract and build kernel images
+5. **Resume Build** - Continue interrupted builds
+6. **Repo Sync Only** - Smart repository synchronization
+7. **Device Manager** - Fleet device management (In Development)
+8. **Repository Manager** - ROM source management
+9. **Directory Manager** - Build directory organization
+10. **Configuration Manager** - ARK settings customization
+11. **Fleet Status** - View all ARK devices
+12. **Tmux Manager** - Session management
 
-## ⚡ Features
+## 📋 Requirements
 
-### 🎯 Enhanced Device Management
-- **ARK Fleet Integration** - Automatic device detection and configuration
-- **Universal ROM Support** - LineageOS, YAAP, AOSP, and custom ROMs
-- **Recovery Building** - TWRP, OrangeFox, and custom recoveries
-- **Source Management** - Automatic repository discovery and cloning
+- **OS**: Linux (Tested on Arch Linux)
+- **Shell**: Bash 4.0+
+- **Dependencies**:
+  - `tmux` - Terminal multiplexer for persistent sessions
+  - `git` - Version control
+  - `repo` - Android repo tool
+  - Android build environment prerequisites
+- **Storage**: 200GB+ recommended for ROM building
+- **RAM**: 16GB+ recommended
 
-### 🔧 Beginner + Expert Friendly
-- **Guided Setup** - Step-by-step instructions for newcomers
-- **Expert Mode** - Skip guidance for experienced developers
-- **Error Recovery** - Helpful suggestions when builds fail
-- **TMUX Integration** - Persistent session management
+## 🛸 Installation
 
-### 🛠️ Technical Features
-- **Automatic Directory Creation** - No manual setup required
-- **Metadata Tracking** - Build information and ecosystem status
-- **Parallel Builds** - Efficient multi-core utilization
-- **Clean Build Management** - Easy cleanup and maintenance
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Linux environment (Ubuntu 20.04+ recommended)
-- 16GB+ RAM, 200GB+ storage
-- Git, Python 3, and build tools
-
-### Installation
 ```bash
-# Clone The ARK Build Tool
-git clone https://github.com/koobie777/Ark-Build-Tool.git
-cd Ark-Build-Tool/ark-forge
+# Clone The ARK Ecosystem ARKFORGE module
+git clone https://github.com/koobie777/Ark-Forge.git ~/the-ark-ecosystem/ark-forge
+cd ~/the-ark-ecosystem/ark-forge
 
 # Make scripts executable
-chmod +x *.sh
+chmod +x arkforge-launcher arkforge.sh
+chmod +x modules/*.sh
 
-# Test ARK Directory Manager
-./ark-directory-manager.sh
+# Create config directory if needed
+mkdir -p config
+
+# Launch The ARK
+./arkforge-launcher
 ```
 
-### Basic Usage
+## 🎮 Usage
+
+### Quick Start
 ```bash
-# Launch The ARK Forge
-./ark-forge-v1.1.0.sh
+# Launch with tmux session management (Recommended)
+./arkforge-launcher
 
-# Select your ARK device (waffle, device2, device3)
-# Choose ROM type (YAAP, LineageOS, AOSP, etc.)
-# The ARK Forge handles the rest!
+# Or run directly without tmux
+./arkforge.sh
 ```
 
-## 📱 Supported Configurations
+### ARK Fleet Devices (Example)
+- **Primary**: OnePlus 12 "waffle"
+- **Secondary**: OnePlus 10 Pro "op515dl1"
 
-### ROMs
-- **YAAP** (Yet Another AOSP Project) - Primary for OnePlus 12
-- **LineageOS** - Universal Android ROM
-- **AOSP** (Android Open Source Project) - Stock Android
-- **Custom ROMs** - User-defined configurations
+### tmux Session Management
+When using `arkforge-launcher`, builds run in persistent tmux sessions:
+- **Detach**: `Ctrl-B`, then `D`
+- **Reattach**: `./arkforge-launcher` and select option 1
+- **List Windows**: `Ctrl-B`, then `W`
+- **Switch Windows**: `Ctrl-B`, then window number
 
-### Recoveries
-- **TWRP** (Team Win Recovery Project)
-- **OrangeFox Recovery**
-- **Custom Recoveries** - User-defined builds
-
-### Devices
-- **OnePlus 12 "Waffle"** - Full support with YAAP integration
-- **[CLASSIFIED]** - Secondary ARK unit support
-- **[REDACTED]** - Experimental ARK unit support
-- **Custom Devices** - Expandable for any Android device
-
-## 🗂️ ARK Ecosystem Components
-
-### Core Tools
-- **ARK Forge** - Main ROM/Recovery builder
-- **ARK Directory Manager** - Ecosystem organization
-- **Orbital Command** - Admin suite (coming soon)
-
-### Directory Management
-```bash
-# Create new build environment
-create_ark_directories "yaap" "waffle"
-
-# Validate ARK ecosystem
-validate_ark_structure
-
-# List all ARK builds
-list_ark_builds
+### Build Directory Structure
+```
+/home/koobie777/android/
+├── lineageos-waffle/       # LineageOS for OnePlus 12
+├── evolution-op515dl1/     # Evolution X for OnePlus 10 Pro
+└── twrp-waffle/           # TWRP recovery for OnePlus 12
 ```
 
-### TMUX Integration
-The ARK Forge automatically starts in a TMUX session for persistence:
-```bash
-# Auto-started session
-tmux attach -t ark-forge-[timestamp]
+## 🛰️ ARK Modes
 
-# Manual session management
-tmux new-session -s ark-custom
-```
+### Expert Mode (Default)
+- Minimal prompts
+- Fast operations
+- Assumes familiarity with Android building
+
+### Cadet Mode (Coming Soon)
+- Guided experience
+- Detailed explanations
+- Step-by-step assistance
 
 ## 🔧 Configuration
 
-### ARK Metadata
-Each build environment includes ARK metadata:
-```json
-{
-  "ark_ecosystem": {
-    "commander": "koobie777",
-    "system": "arksupreme-mk1",
-    "created": "2025-07-13 02:52:01 UTC",
-    "rom_type": "yaap",
-    "device": "waffle",
-    "version": "1.1.0"
-  }
-}
-```
-
-### Environment Variables
+ARK settings are stored in `config/ark-settings.conf`:
 ```bash
-export ARK_BUILD_DIR="/home/koobie777/android/yaap-waffle"
-export ARK_OUTPUT_DIR="/home/koobie777/android/builds/yaap-waffle"
-export ARK_LOG_DIR="/home/koobie777/android/logs/yaap-waffle"
-export ARK_CACHE_DIR="/home/koobie777/android/cache/yaap-waffle"
+# The ARK Configuration
+ARK_THEME_ENABLED=true
+ARK_MODE="expert"  # or "cadet"
+ARK_BUILD_DIR="/home/koobie777/android"
+ARK_DEFAULT_JOBS=$(nproc --all)
 ```
 
-## 🎯 Roadmap
+## 📚 Module Development
 
-- [x] **v1.0.0** - Basic ROM/Recovery builder
-- [x] **v1.1.0** - Enhanced directory management & ARK ecosystem
-- [ ] **v1.2.0** - Device database and automatic source discovery
-- [ ] **v1.3.0** - Orbital Command integration
-- [ ] **v2.0.0** - Full ARK ecosystem with CI/CD
+Create new ARK modules:
+```bash
+# Module template
+cat > modules/ark-new-module.sh << 'EOF'
+#!/usr/bin/env bash
+# ╭─────────────────────────────────────────────╮
+# │         ARK MODULE NAME                     │
+# │              Description                    │
+# │           Commander: koobie777              │
+# ╰─────────────────────────────────────────────╯
+
+source "$ARK_CONFIG_DIR/ark-settings.conf"
+
+# Module code here
+EOF
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**tmux sessions persisting:**
+```bash
+# List all tmux sessions
+tmux ls
+
+# Kill specific session
+tmux kill-session -t arkforge
+```
+
+**Module not loading:**
+- Check file permissions: `chmod +x modules/*.sh`
+- Verify path in arkforge.sh
+
+**Build failures:**
+- Check tmux windows: `tmux attach -t arkforge`
+- Review logs in build directory
+
+## 🚀 Roadmap
+
+### Version 1.2.0 (Planned)
+- [ ] Complete Recovery Build module
+- [ ] Implement Cadet Mode
+- [ ] Add build statistics/logging
+- [ ] Device tree automation
+
+### Version 2.0.0 (Future)
+- [ ] Integration with Orbital Command
+- [ ] Fleet-wide build orchestration
+- [ ] Cloud backup integration
+- [ ] AI-assisted troubleshooting
 
 ## 🤝 Contributing
 
-The ARK ecosystem welcomes contributions! Please see our [contribution guidelines](CONTRIBUTING.md) and check out [Issue #4](https://github.com/koobie777/Ark-Build-Tool/issues/4) for the v1.1.0 enhancement roadmap.
+The ARK Ecosystem welcomes contributions! Please ensure:
+- Maintain ARK theming and style
+- Test modules thoroughly
+- Update documentation
+- Follow the modular architecture
 
-### Development Setup
-```bash
-# Fork and clone
-git clone https://github.com/yourusername/Ark-Build-Tool.git
-cd Ark-Build-Tool
+## 📜 License
 
-# Create feature branch
-git checkout -b feature/your-enhancement
-
-# Test your changes
-./ark-forge/ark-directory-manager.sh
-```
-
-## 📊 ARK Ecosystem Status
-
-```
-╭──────────────────────────────────────╮
-│  The ARK Fleet Status                │
-│  System: arksupreme-mk1              │
-│  Commander: koobie777                │
-│  Status: 2025-07-13 02:52:01 UTC     │
-╰──────────────────────────────────────╯
-
-✅ OnePlus 12 (waffle): Active
-⚠️ [CLASSIFIED] (device2): Standby  
-⚠️ [REDACTED] (device3): Development
-```
-
-## 🛡️ License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **YAAP Developers** - OnePlus 12 device support
-- **LineageOS Team** - Universal Android ROM framework
-- **TWRP Team** - Recovery development tools
-- **The ARK Community** - Testing and feedback
+This project is part of The ARK Ecosystem  
+Commander: koobie777  
+System: arksupreme-mk1
 
 ---
 
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/koobie777/Ark-Build-Tool/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/koobie777/Ark-Build-Tool/discussions)
-- **Commander**: [@koobie777](https://github.com/koobie777)
-
----
-
-**🜁 "May The ARK be with you!" - Commander koobie777**
-
-*The ARK Forge v1.1.0 - Built for The ARK ecosystem on arksupreme-mk1*
+<div align="center">
+  
+  **🛰️ May The ARK be with you! 🛰️**
+  
+  Built with ❤️ for the Android development community
+  
+</div>
