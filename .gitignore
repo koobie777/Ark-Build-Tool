@@ -1,0 +1,17 @@
+# ARK Build Outputs
+builds/
+cache/
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# User configurations
+config/user-*.conf
+
+# OS files
+.DS_Store
+Thumbs.db
