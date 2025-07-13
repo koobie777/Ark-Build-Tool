@@ -82,7 +82,7 @@ chmod +x *.sh
 ### Basic Usage
 ```bash
 # Launch The ARK Forge
-./ark-forge.sh
+./ark-forge-v1.1.0.sh
 
 # Select your ARK device (waffle, device2, device3)
 # Choose ROM type (YAAP, LineageOS, AOSP, etc.)
