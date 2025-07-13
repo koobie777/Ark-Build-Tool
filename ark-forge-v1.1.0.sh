@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # ╭─────────────────────────────────────────────╮
-# │           ARKFORGE ENHANCED v3.0           │
-# │      Modular Ecosystem Orchestrator        │
-# │           Commander: koobie777             │
-# │        The ARK Ecosystem Supreme           │
+# │           ARKFORGE ENHANCED v1.1.0          │
+# │      Modular Ecosystem Orchestrator         │
+# │           Commander: koobie777              │
+# │        The ARK Ecosystem Supreme            │
 # ╰─────────────────────────────────────────────╯
 
 ###--- Base Directories ---###
@@ -31,9 +31,9 @@ ark_print() {
     local timestamp=$(date -u '+%H:%M:%S')
     case $level in
         success) echo -e "${ARK_SUCCESS}[$timestamp] ✅ $message${NC}" ;;
-        info)    echo -e "${ARK_INFO}[$timestamp] ℹ️  $message${NC}" ;;
-        accent)  echo -e "${ARK_ACCENT}[$timestamp] 🛰️  $message${NC}" ;;
-        warn)    echo -e "${ARK_WARN}[$timestamp] ⚠️  $message${NC}" ;;
+        info)    echo -e "${ARK_INFO}[$timestamp] ℹ️ $message${NC}" ;;
+        accent)  echo -e "${ARK_ACCENT}[$timestamp] 🛰️ $message${NC}" ;;
+        warn)    echo -e "${ARK_WARN}[$timestamp] ⚠️ $message${NC}" ;;
         error)   echo -e "${ARK_ERROR}[$timestamp] ❌ $message${NC}" ;;
         *)       echo "[$timestamp] $message" ;;
     esac
@@ -67,9 +67,9 @@ show_main_menu() {
     clear
     echo -e "${ARK_ACCENT}"
     echo "╭─────────────────────────────────────────────────────────────╮"
-    echo "│                🛰️  ARKFORGE ECOSYSTEM v3.0                │"
-    echo "│                Modular Build Command Center                │"
-    echo "│  Commander: ${ARK_COMMANDER:-koobie777}                    │"
+    echo "│                🛰️  ARKFORGE ECOSYSTEM v3.0                  │"
+    echo "│                Modular Build Command Center                 │"
+    echo "│  Commander: ${ARK_COMMANDER:-koobie777}                     │"
     echo "│  Status: Operational        Time: $(date -u '+%Y-%m-%d %H:%M:%S UTC') │"
     echo "╰─────────────────────────────────────────────────────────────╯"
     echo -e "${NC}"
