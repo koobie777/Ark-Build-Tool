@@ -54,7 +54,7 @@ cd ark-forge
 ```
 
 ### **Smart Build (Recommended)**
-1. Launch ARKFORGE: `./ark-forge-enhanced.sh`
+1. Launch ARKFORGE: `./ark-forge-v1.1.0.sh`
 2. Select **Option 1**: Smart Build
 3. Enter device name: `OnePlus 12` or `OnePlus 10 Pro`
 4. Select build type: Recovery or ROM
@@ -289,7 +289,7 @@ Vendor: https://github.com/yaap/proprietary_vendor_oneplus_waffle
 
 ```
 ark-forge/
-├── ark-forge-enhanced.sh           # 🛠️ Main ARKFORGE orchestrator
+├── ark-forge-v1.1.0.sh             # 🛠️ Main ARKFORGE orchestrator
 ├── modules/                        # 🧩 Modular components
 │   ├── ark-smart-device-discovery.sh
 │   ├── ark-repo-manager-enhanced.sh
@@ -347,7 +347,7 @@ ls -la modules/
 **Configuration Issues**
 ```bash
 # Reset configurations to defaults
-./ark-forge-enhanced.sh → Option 7 → Reset to defaults
+./ark-forge-v1.1.0.sh → Option 7 → Reset to defaults
 ```
 
 **Build Failures**
@@ -384,7 +384,7 @@ scripts/ark-update.sh
 
 ---
 
-## 🛰️ ARKFORGE v3.0
+## 🛰️ ARKFORGE v1.1.0
 
 **Commander**: koobie777  
 **Time**: 2025-07-13 04:15:27 UTC  
